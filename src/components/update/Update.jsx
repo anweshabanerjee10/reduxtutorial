@@ -4,7 +4,7 @@ import "./update.css";
 import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
 // import { remove, update } from "../../redux/userSlice";
-import { updateUser } from "../../redux/apiCalls";
+import { updateUser2 } from "../../redux/userSlice";
 
 export default function Update() {
   const [name, setName] = useState("");
@@ -15,7 +15,7 @@ export default function Update() {
   const dispatch = useDispatch();
   const handleUpdate = (e) => {
     e.preventDefault();
-    updateUser({ name, email }, dispatch);
+    dispatch(updateUser2({ name, email }));
   };
 
   const handleDelete = (e) => {
