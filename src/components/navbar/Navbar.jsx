@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import "./navbar.css";
 
 export default function Navbar() {
-  const name = useSelector((state) => state.user.name);
+  const name = useSelector((state) => state.user.userInfo.name);
 
   console.log("navbar rerendered");
   return (
